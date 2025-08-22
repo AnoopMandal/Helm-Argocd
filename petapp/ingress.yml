@@ -19,10 +19,3 @@ spec:
                 name: petapp-service  # Name of the Kubernetes service
                 port:
                   number: 8080
-          - path: /ecomm  # Root path for accessing your service
-            pathType: Prefix
-            backend:
-              service:
-                name: ecomm-service  # Name of the Kubernetes service
-                port:
-                  number: 8081
