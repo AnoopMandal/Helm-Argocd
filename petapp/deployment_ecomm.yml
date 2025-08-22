@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecomm-deployment-devops
+  namespace: ecomm
+spec:
+  replicas: 1 # You can change the number of replicas as needed
+  selector:
+    matchLabels:
+      app: ecomm  # This label should match the selector in the Service
+  template:
+    metadata:
+      labels:
+        app: ecomm  # This label should match the selector in the Service
+    spec:
+      containers:
+      - name: ecomm
+        image: anooplivfree/ecomm:1.0 # You can specify a different version if needed
+        ports:
+        - containerPort: 3000  # This should match the targetPort in the Service
+
