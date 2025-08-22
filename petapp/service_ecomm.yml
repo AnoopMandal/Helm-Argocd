@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: ecomm-service
   namespace: ecomm
+  annotations:
+    argocd.argoproj.io/tracking-id: ecomm:/Service:ecomm/ecomm-service
 # or "elb" for a classic load balancer
 spec:
   type: ClusterIP
